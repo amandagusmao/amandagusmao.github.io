@@ -1,6 +1,8 @@
 name: Describe EC2 instances
+
 on:
   push
+
 jobs:
   describe:
     runs-on: ubuntu-latest
@@ -10,6 +12,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
       AWS_EC2_METADATA_DISABLED: true
-  steps:
+
+    steps:
     - name: Describe AWS EC2 instances
-    run: aws ec2 describe-instances
+      run: aws ec2 describe-instances
