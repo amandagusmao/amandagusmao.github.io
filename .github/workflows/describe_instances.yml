@@ -11,5 +11,5 @@ jobs:
       AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
       AWS_EC2_METADATA_DISABLED: true
   steps:
-  - name: Describe AWS EC2 instances
+    - name: Describe AWS EC2 instances
     run: aws ec2 describe-instances
