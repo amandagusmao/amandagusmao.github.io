@@ -34,8 +34,8 @@ export class ProductsController {
   @Put(':id')
   update(
     @Param('id') id: string,
-    @Body() updateProductDto: UpdateProductDto,
-  ): Promise<Product> {
+    @Body() updateProductDto: UpdateProductDto,):
+    Promise < Product > {
     return this.productsService.update(id, updateProductDto);
   }
 
